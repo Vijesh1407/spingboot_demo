@@ -17,7 +17,7 @@
         <h2>Available Advertisements</h2>
         <div class="ads-container">
             <div class="ad-card" th:each="ad : ${ads}">
-                <img th:src="@{/images/{img}(img=${ad.imageUrl})}" alt="Ad Image" />
+                <img th:src="@{'/images/' + ${ad.imageUrl}}" alt="Ad Image" />
                 <h3 th:text="${ad.heading}"></h3>
                 <p th:text="${ad.category}"></p>
                 <p th:text="${ad.description}"></p>
